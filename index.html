@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Battalion Force Management</title>
+</head>
+<body>
+    
+    <div id="container" class="container">
+        <header>
+            <h1>BATTALION FORCE MANAGEMENT</h1>
+        </header>
+        <hr>
+    
+        <form id="addPersonForm">
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="text" id="rank" placeholder="Rank" required>
+            <input type="text" id="position" placeholder="Position" required>
+            <input type="text" id="platoon" placeholder="Platoon" required>
+            <input type="number" id="missionTime" placeholder="Mission Time (seconds)" required>
+
+            <select name="status" id="status">
+                <option value="active">Active</option>
+                <option value="reserve">Reserve</option>
+                <option value="retired">Retired</option>
+            </select>
+
+            <input id="submit" type="submit" value="Add Personnel">
+        </form>
+        
+        <h3>FORCES OVERVIEW</h3>
+        <hr>
+        <table id="todoTable">
+            <thead>
+                <tr>
+                    <th>Full name</th>
+                    <th>RANK</th>
+                    <th>POSITION</th>
+                    <th>PLATOON</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+    <div class="modal">
+        <h3>EDIT PERSONNEL</h3>
+        <hr>
+        <div class="modal-content">
+            <form id="editForm">
+                <input type="text" id="editFullName" placeholder="Full Name" required>
+                <input type="text" id="editRank" placeholder="Rank" required>
+                <input type="text" id="editPosition" placeholder="Position" required>
+                <input type="text" id="editPlatoon" placeholder="Platoon" required>
+                <input type="number" id="editMissionTime" placeholder="Mission Time (seconds)" required>
+
+                <select id="editStatus">
+                    <option value="active">Active</option>
+                    <option value="reserve">Reserve</option>
+                    <option value="retired">Retired</option>
+                </select>
+
+                <input id="save" type="submit" value="Save Changes">
+                <input id="cancel" type="button" value="Cancel">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
