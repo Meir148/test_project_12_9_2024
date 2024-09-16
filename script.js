@@ -85,6 +85,3 @@ row.querySelector('.edit').addEventListener('click', () => {
     editsoldier(soldier.fullName);
 });
 
-editsoldier(){
-
-}
